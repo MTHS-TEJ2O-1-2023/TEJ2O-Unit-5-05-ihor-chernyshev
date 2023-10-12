@@ -2,7 +2,7 @@
  *
  * Created by: Ihor Chernyshev
  * Created on: Oct 2023
- * This program uses the RobotBit's Neopixels to create Traffic Light 
+ * This program uses the RobotBit's Neopixels to create Traffic Light
 */
 
 let neopixelStrip: neopixel.Strip = null
@@ -16,7 +16,7 @@ neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Black))
 neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
-basic.forever(function() {
+basic.forever(function () {
   neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
   neopixelStrip.show()
   basic.pause(1000)
