@@ -5,6 +5,7 @@
  * This program uses the RobotBit's Neopixels to create Traffic Light
 */
 
+// setup
 let neopixelStrip: neopixel.Strip = null
 
 basic.clearScreen()
@@ -17,16 +18,19 @@ neopixelStrip.show()
 basic.showIcon(IconNames.Happy)
 
 basic.forever(function () {
+  // turning on green
   neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
   neopixelStrip.show()
   basic.pause(1000)
+
+  // turning on yellow
   neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.show()
   neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Yellow))
   neopixelStrip.show()
   basic.pause(1000)
+
+  // turning on red
   neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Black))
-  neopixelStrip.show()
   neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
   neopixelStrip.show()
   basic.pause(1000)
